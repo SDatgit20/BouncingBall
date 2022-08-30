@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static com.tw.dojo.bouncingBall.BallTestHarness.*;
 
-public class BouncingBallTest {
+public class BouncingBallAlgoTest {
     @Test
     public void shouldGoDown() {
-        Ball bouncingBall = BallFactory.bouncingBall(0, 100, BouncingBall.DOWN);
+        Ball bouncingBall = BallFactory.bouncingBall(0, 100, BouncingBallAlgo.DOWN);
 
         bouncingBall.update();
 
@@ -18,7 +18,7 @@ public class BouncingBallTest {
     @Test
     public void shouldGoUpAfterHittingTheBottom() {
         int theBottomEdge = BallWorld.BOX_HEIGHT - Ball.DEFAULT_RADIUS;
-        Ball bouncingBall = BallFactory.bouncingBall(0, theBottomEdge, BouncingBall.DOWN);
+        Ball bouncingBall = BallFactory.bouncingBall(0, theBottomEdge, BouncingBallAlgo.DOWN);
 
         bouncingBall.update();
 
@@ -27,7 +27,7 @@ public class BouncingBallTest {
 
     @Test
     public void shouldGoUp() {
-        Ball bouncingBall = BallFactory.bouncingBall(0, 100, BouncingBall.UP);
+        Ball bouncingBall = BallFactory.bouncingBall(0, 100, BouncingBallAlgo.UP);
 
         bouncingBall.update();
 
@@ -37,7 +37,7 @@ public class BouncingBallTest {
     @Test
     public void shouldGoDownAfterHittingTheTop() {
         int theTopEdge = Ball.DEFAULT_RADIUS;
-        Ball bouncingBall = BallFactory.bouncingBall(0, theTopEdge, BouncingBall.UP);
+        Ball bouncingBall = BallFactory.bouncingBall(0, theTopEdge, BouncingBallAlgo.UP);
 
         bouncingBall.update();
 

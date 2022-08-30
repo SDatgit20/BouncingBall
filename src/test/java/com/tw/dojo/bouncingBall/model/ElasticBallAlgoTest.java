@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static com.tw.dojo.bouncingBall.BallTestHarness.*;
 
-public class ElasticBallTest {
+public class ElasticBallAlgoTest {
     @Test
     public void shouldDecreaseRadius() {
-        Ball elasticBall = BallFactory.elasticBall(0, 0, 20, ElasticBall.SHRINK);
+        Ball elasticBall = BallFactory.elasticBall(0, 0, 20, ElasticBallAlgo.SHRINK);
 
         elasticBall.update();
 
@@ -16,7 +16,7 @@ public class ElasticBallTest {
 
     @Test
     public void shouldIncreaseRadiusAfterFullyShrinking() {
-        Ball elasticBall = BallFactory.elasticBall(0, 0, 0, ElasticBall.SHRINK);
+        Ball elasticBall = BallFactory.elasticBall(0, 0, 0, ElasticBallAlgo.SHRINK);
 
         elasticBall.update();
 
@@ -25,7 +25,7 @@ public class ElasticBallTest {
 
     @Test
     public void shouldIncreaseInSize() {
-        Ball elasticBall = BallFactory.elasticBall(250, 100, 20, ElasticBall.GROW);
+        Ball elasticBall = BallFactory.elasticBall(250, 100, 20, ElasticBallAlgo.GROW);
 
         elasticBall.update();
 
@@ -34,7 +34,7 @@ public class ElasticBallTest {
 
     @Test
     public void shouldDecreaseInSizeAfterFullyExpanding() {
-        Ball elasticBall = BallFactory.elasticBall(0, 0, Ball.DEFAULT_RADIUS, ElasticBall.GROW);
+        Ball elasticBall = BallFactory.elasticBall(0, 0, Ball.DEFAULT_RADIUS, ElasticBallAlgo.GROW);
 
         elasticBall.update();
 

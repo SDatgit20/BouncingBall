@@ -29,4 +29,5 @@ public abstract class Ball {
     }
 
     public abstract void update();
+
 }
